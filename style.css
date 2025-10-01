@@ -115,6 +115,7 @@ body{
     border: 2px solid rgba(242, 242, 242, 1);
     width: 304px;
     margin-left: 10px;
+    margin-bottom: 66px;
 }
 
 .mainPageTitle button{
@@ -135,4 +136,15 @@ body{
 .mainPageTitle button:hover{
     transform: translate(-10px, -10px);
     transition: all 0.3s ease;
+}
+
+.truck svg:first-child{
+    z-index: 1;
+    position: absolute;
+    width: 51.92px;
+    height: 39px;
+}
+
+.truck svg:last-child{
+    margin-left: 2px;
 }
