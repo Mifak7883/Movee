@@ -1,0 +1,138 @@
+body{
+    width: 1920px;
+    display: flex;
+    margin: auto;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.mainPage{
+    height: 650px;
+    background: rgba(254, 209, 0, 1);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 100%;
+}
+
+.headerMenu{
+    display: flex;
+    max-width: 1312px;
+    width: 100%;
+    height: 37px;
+    margin: 40px 301px 63px 307px;
+    align-items: center;
+}
+
+.headerMenuLogo{
+    margin: 0;
+    display: flex;
+    text-decoration: none;
+    color: rgba(51, 51, 51, 1);
+}
+
+.headerMenuLogo h1{
+    max-width: 115px;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 37px;
+    letter-spacing: 0;
+    text-align: left;
+}
+
+.headerMenuNav{
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 452px;
+    width: 100%;
+}
+
+.navElement{
+    display: flex;
+    color: rgba(51, 51, 51, 1);
+    text-decoration: none;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.phoneNumber{
+    color: rgba(51, 51, 51, 1);
+
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0%;
+    text-align: left;
+    align-items: center;
+    border-bottom: 1px solid rgba(51, 51, 51, 1);
+    width: 100%;
+    max-width: 206px;
+}
+
+.mainPageTitle{
+    display: flex;
+    flex-direction: column;
+    margin-left: 301px;
+}
+
+.mainPageTitle span:first-child{
+    color: rgba(51, 51, 51, 1);
+
+    font-family: Montserrat;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 126.9%;
+    letter-spacing: 0%;
+    text-align: left;
+    margin: 0;
+}
+
+.mainPageTitle span{
+    color: rgba(51, 51, 51, 1);
+    margin-bottom: 50px;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 37px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.buttonBorder{
+    border: 2px solid rgba(242, 242, 242, 1);
+    width: 304px;
+    margin-left: 10px;
+}
+
+.mainPageTitle button{
+    width: 304px;
+    height: 60px;
+    color: rgba(242, 242, 242, 1);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0;
+    background: rgba(255, 53, 43, 1);
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.mainPageTitle button:hover{
+    transform: translate(-10px, -10px);
+    transition: all 0.3s ease;
+}
