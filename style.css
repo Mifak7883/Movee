@@ -1,7 +1,7 @@
 body{
     width: 1920px;
     display: flex;
-    margin: auto;
+    margin: 0;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -13,7 +13,6 @@ body{
     background: rgba(254, 209, 0, 1);
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;
     width: 100%;
 }
 
@@ -22,7 +21,7 @@ body{
     max-width: 1312px;
     width: 100%;
     height: 37px;
-    margin: 40px 301px 63px 307px;
+    margin: 40px 301px 0 307px;
     align-items: center;
 }
 
@@ -48,11 +47,13 @@ body{
 
 .headerMenuNav{
     display: flex;
-    margin: 0 auto;
+    margin-left: 315px;
+    margin-right: 224px;
     align-items: center;
     justify-content: space-between;
     max-width: 452px;
     width: 100%;
+    z-index: 9999999;
 }
 
 .navElement{
@@ -63,7 +64,7 @@ body{
     font-size: 18px;
     font-weight: 500;
     line-height: 22px;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-align: left;
 }
 
@@ -74,7 +75,7 @@ body{
     font-size: 24px;
     font-weight: 600;
     line-height: 29px;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-align: left;
     align-items: center;
     border-bottom: 1px solid rgba(51, 51, 51, 1);
@@ -86,39 +87,45 @@ body{
     display: flex;
     flex-direction: column;
     margin-left: 301px;
+    margin-right: 66px;
+    margin-top: 63px;
 }
 
-.mainPageTitle span:first-child{
+.mainPageTitle > span:nth-child(1){
     color: rgba(51, 51, 51, 1);
 
     font-family: Montserrat;
     font-size: 70px;
     font-weight: 700;
     line-height: 126.9%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-align: left;
     margin: 0;
 }
 
-.mainPageTitle span{
+.mainPageTitle > span:nth-child(2){
     color: rgba(51, 51, 51, 1);
     margin-bottom: 50px;
     font-family: Montserrat;
     font-size: 30px;
     font-weight: 600;
     line-height: 37px;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-align: left;
 }
 
-.buttonBorder{
+.borderWrapper {
+    --background: rgba(255, 53, 43, 1);
+    display: inline-block;
     border: 2px solid rgba(242, 242, 242, 1);
-    width: 304px;
+    padding: 0;
+    position: relative;
+    max-width: max-content;
     margin-left: 10px;
     margin-bottom: 66px;
 }
 
-.mainPageTitle button{
+.borderButton {
     width: 304px;
     height: 60px;
     color: rgba(242, 242, 242, 1);
@@ -127,15 +134,27 @@ body{
     font-weight: 600;
     line-height: 29px;
     letter-spacing: 0;
-    background: rgba(255, 53, 43, 1);
+    background: var(--background);
     border: none;
-    transition: all 0.3s ease;
     cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
-.mainPageTitle button:hover{
+.borderWrapper:hover .borderButton {
     transform: translate(-10px, -10px);
-    transition: all 0.3s ease;
+
+}
+
+.mainPageAdvantages{
+    display: flex;
+    height: 42px;
+    max-width: max-content;
+}
+
+.truck{
+    margin-right: 7.36px;
 }
 
 .truck svg:first-child{
@@ -147,4 +166,83 @@ body{
 
 .truck svg:last-child{
     margin-left: 2px;
+}
+
+.mainPageAdvantages > span{
+    color: rgba(51, 51, 51, 1);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: left;
+}
+
+.mainPageAdvantages > span:nth-child(2){
+    margin-right: 40px;
+}
+
+.box{
+    margin-right: 8px;
+}
+
+.box > svg:first-child{
+    position: absolute;
+}
+
+.box > svg:last-child{
+    margin-left: 2px;
+}
+
+.mainPageAdvantages > span:nth-child(4){
+    margin-right: 26px;
+}
+
+.money{
+    margin-right: 8px;
+}
+
+.money > svg:first-child{
+    position: absolute;
+}
+
+.money > svg:last-child{
+    margin-left: 2px;
+}
+
+.manWithBox{
+    z-index: 2;
+}
+
+.abobaCar{
+    /* Rectangle 2 */
+    width: 499px;
+    height: 300px;
+    align-self: center;
+    position: relative;
+    bottom: 50px;
+    right: 90px;
+}
+
+.phoneCall{
+    border: none;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background: rgba(61, 155, 233, 0.8);
+    align-self: flex-end;
+    cursor: pointer;
+    position: relative;
+    right: 342px;
+    bottom: 58px;
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0px 0px 0px 0px rgba(197, 225, 248, 0.3); }
+    50% { box-shadow: 0px 0px 0px 18px rgba(197, 225, 248, 0.3); }
+}
+
+.phoneCall{
+    animation: pulse 1s infinite ease-in-out;
+
 }
