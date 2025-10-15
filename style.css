@@ -459,7 +459,7 @@ body{
     line-height: 40px;
     letter-spacing: 0%;
     text-align: left;
-    text-shadow: 2px 0 yellow;
+    text-shadow: 2px 0 rgba(254, 209, 0, 1);
 }
 
 .steps span:nth-child(2){
@@ -732,4 +732,5 @@ body{
     .mainPage{
         padding: 0 14px 0 14px;
     }
+
 }
