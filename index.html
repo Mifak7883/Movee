@@ -315,6 +315,50 @@
         </div>
     </div>
 </div>
+
+<div class="priceContainer">
+    <div class="price">
+        <span>Цены </span>
+        <span>Фиксированная стоимость на переезд под ключ</span>
+        <div class="priceElements">
+            <div class="priceElement">
+                <span>1-комнатная кв-ра</span>
+                <span>1 фургон</span>
+                <span>2 грузчика</span>
+                <span>Переезд за 4 часа</span>
+                <span>8 490₽</span>
+                <button class="borderButton">Заказать</button>
+            </div>
+            <div class="priceElement">
+                <span>2-комнатная кв-ра</span>
+                <span>1 газель - 3 метра</span>
+                <span>2 грузчика</span>
+                <span>Переезд за 4 часа</span>
+                <span>10 990₽</span>
+                <button class="borderButton">Заказать</button>
+
+            </div>
+            <div class="priceElement">
+                <span>3-комнатная кв-ра</span>
+                <span>1 газель - 4 метра</span>
+                <span>2 грузчика</span>
+                <span>Переезд за 6 часов</span>
+                <span>16 490₽</span>
+                <button class="borderButton">Заказать</button>
+            </div>
+            <button id="showAllPrices">Все цены</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('showAllPrices').addEventListener('click', function () {
+         const modifiedElement = document.querySelectorAll('.priceElements .priceElement:nth-child(odd)');
+         modifiedElement.forEach(priceElement => {
+             priceElement.classList.toggle('modified');
+         })
+    })
+</script>
 </body>
 
 </html>

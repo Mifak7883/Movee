@@ -426,7 +426,7 @@ body{
 }
 
 .howITWork{
-    margin: 95px auto 0 auto;
+    margin: 95px auto 45px auto;
     max-width: 1106px;
     display: grid;
     grid-row-gap: 60px;
@@ -514,6 +514,114 @@ body{
     grid-column-gap: 37px;
     grid-area: 2 / 2;
     height: 87px;
+}
+
+.priceContainer{
+    padding: 59px 24px 67px 24px;
+}
+
+.price{
+    max-width: 1305px;
+    display: grid;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.price > span:first-child{
+    grid-area: 1 / 1;
+    color: rgba(51, 51, 51, 1);
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 37px;
+    letter-spacing: 0;
+    margin-bottom: 15px;
+}
+.price > span:nth-child(2){
+    grid-area: 2 / 1;
+    color: rgba(51, 51, 51, 1);
+
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0;
+    margin-bottom: 60px;
+}
+
+.priceElements{
+    grid-column-gap: 24px;
+    grid-area: 3 / 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.priceElement{
+    justify-content: center;
+    display: grid;
+    border: 1px solid rgba(235, 235, 235, 1);
+    grid-column-gap: 23px;
+    padding: 84px 0 87px 0;
+}
+
+.priceElements .priceElement span:first-child{
+    color: rgba(51, 51, 51, 1);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0;
+    text-align: center;
+    margin-bottom: 61px;
+}
+
+
+.priceElements .priceElement span:nth-child(n+2):nth-child(-n+4){
+    color: rgba(51, 51, 51, 1);
+
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.priceElements .priceElement span:nth-child(5){
+    margin-top: 39px;
+    margin-bottom: 52px;
+    color: rgba(51, 51, 51, 1);
+
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 37px;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.priceElement:hover{
+    border: 1px solid rgba(254, 209, 0, 1);
+}
+
+.priceElement > .borderButton{
+    /* Rectangle 8 */
+    width: 250px;
+    height: 51.34px;
+    background: rgba(254, 209, 0, 1);
+    color: rgba(51, 51, 51, 1);
+
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.priceElements > button{
+    display: none;
 }
 
 @media (max-width: 1720px) {
@@ -643,6 +751,74 @@ body{
     .mainInformation{
         justify-content: center;
     }
+
+    .priceContainer{
+        background: rgba(248, 251, 255, 1);
+        padding: 50px 11px 50px 17px;
+    }
+
+    .priceElements{
+        grid-template-columns: 1fr;
+    }
+
+    .priceElements .priceElement:nth-child(odd){
+        display: none;
+    }
+
+    .modified{
+        display: grid !important;
+    }
+
+    .priceElement{
+        border:none;
+        padding: 40px 0 20px 0;
+    }
+
+    .price > span:first-child{
+        color: rgba(51, 51, 51, 1);
+
+        font-family: Montserrat;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0;
+        text-align: center;
+        margin: 0;
+    }
+
+    .priceElement:hover{
+        border: none;
+    }
+
+    .price > span:nth-child(2){
+        display: none;
+    }
+
+    .priceElement > .borderButton{
+        width: 292px;
+        height: 60px;
+    }
+
+    .priceElements > button{
+        display: flex;
+        justify-self: center;
+        padding: 0;
+        /* Все цены */
+        width: 81px;
+        height: 21px;
+        color: rgba(51, 51, 51, 1);
+
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 131.4%;
+        letter-spacing: 0;
+        text-align: center;
+        border: none;
+        border-bottom: 1px solid black;
+        background: none;
+    }
+
 }
 
 @media (max-width: 768px){
